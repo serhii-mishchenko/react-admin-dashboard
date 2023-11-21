@@ -29,15 +29,14 @@ function UnresolvedTicketsComponent({ containerStyles }) {
     return (
         <CardComponent
             containerStyles={containerStyles}
-            title='Unresolved tickets'
-            link='View details'
+            title='Candidates in progress'
             subtitle='Group:'
             subtitleTwo='Support'
             items={[
-                renderStat('Waiting on Feature Request', 4238),
-                renderStat('Awaiting Customer Response', 1005),
-                renderStat('Awaiting Developer Fix', 914),
-                renderStat('Pending', 281)
+                renderStat('Applied', 4238),
+                renderStat('Waiting for HR interview', 1005),
+                renderStat('Waiting for technical interview', 500),
+                renderStat('Got offer', 500),
             ]}
         />
     );
