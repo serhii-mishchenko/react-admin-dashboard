@@ -34,7 +34,7 @@ const typography = {
         fontSize: 14,
         lineHeight: '20px',
         letterSpacing: '0.2px',
-        color: color.lightBlue,
+        color: color.green,
         textAlign: 'right',
         cursor: 'pointer',
         textDecoration: 'underline',

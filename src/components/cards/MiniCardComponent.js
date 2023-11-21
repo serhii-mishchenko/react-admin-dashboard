@@ -11,9 +11,9 @@ const useStyles = createUseStyles((theme) => ({
         maxWidth: 350,
         padding: '16px 32px 16px 32px',
         '&:hover': {
-            borderColor: theme.color.lightBlue,
+            borderColor: theme.color.green,
             '&:nth-child(n) > span': {
-                color: theme.color.lightBlue
+                color: theme.color.green
             }
         }
     },

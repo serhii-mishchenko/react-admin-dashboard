@@ -38,7 +38,7 @@ const useStyles = createUseStyles((theme) => ({
 
 const TAGS = {
     URGENT: { text: 'URGENT', backgroundColor: '#FEC400', color: '#FFFFFF' },
-    NEW: { text: 'NEW', backgroundColor: '#29CC97', color: '#FFFFFF' },
+    NEW: { text: 'NEW', backgroundColor: '#007272', color: '#FFFFFF' },
     DEFAULT: { text: 'DEFAULT', backgroundColor: '#F0F1F7', color: '#9FA2B4' }
 };
 
