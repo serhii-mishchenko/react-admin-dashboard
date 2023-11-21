@@ -118,17 +118,17 @@ function TodayTrendsComponent() {
             >
                 <Row wrap horizontal='space-between'>
                     <Column>
-                        <span className={classes.graphTitle}>Today’s trends</span>
-                        <span className={classes.graphSubtitle}>as of 25 May 2019, 09:41 PM</span>
+                        <span className={classes.graphTitle}>Week trends</span>
+                        {/* <span className={classes.graphSubtitle}>as of 25 May 2019, 09:41 PM</span> */}
                     </Column>
-                    {renderLegend(theme.color.lightBlue, 'Today')}
+                    {renderLegend(theme.color.green, 'Week')}
                 </Row>
                 <div className={classes.graphContainer}>
                     <LineChart
                         data={data}
                         viewBoxWidth={500}
-                        pointsStrokeColor={theme.color.lightBlue}
-                        areaColor={theme.color.lightBlue}
+                        pointsStrokeColor={theme.color.green}
+                        areaColor={theme.color.green}
                         areaVisible={true}
                     />
                 </div>
