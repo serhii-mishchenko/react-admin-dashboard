@@ -25,9 +25,9 @@ const useStyles = createUseStyles({
         zIndex: ({ zIndex }) => zIndex
     },
     loading: {
-        border: ({ theme }) => `16px solid ${theme.color.lightGrayishBlue}`,
+        border: ({ theme }) => `16px solid ${theme.color.white}`,
         borderRadius: '50%',
-        borderTop: ({ theme }) => `16px solid ${theme.color.brightBlue}`,
+        borderTop: ({ theme }) => `16px solid ${theme.color.green}`,
         width: 120,
         height: 120,
         animationName: '$loadingSpin',
