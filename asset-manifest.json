@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-admin-dashboard/static/css/main.c722d9b5.chunk.css",
+    "main.js": "/react-admin-dashboard/static/js/main.815e8375.chunk.js",
+    "main.js.map": "/react-admin-dashboard/static/js/main.815e8375.chunk.js.map",
+    "runtime-main.js": "/react-admin-dashboard/static/js/runtime-main.24560bea.js",
+    "runtime-main.js.map": "/react-admin-dashboard/static/js/runtime-main.24560bea.js.map",
+    "static/js/2.4669d5ca.chunk.js": "/react-admin-dashboard/static/js/2.4669d5ca.chunk.js",
+    "static/js/2.4669d5ca.chunk.js.map": "/react-admin-dashboard/static/js/2.4669d5ca.chunk.js.map",
+    "static/js/3.81927bdc.chunk.js": "/react-admin-dashboard/static/js/3.81927bdc.chunk.js",
+    "static/js/3.81927bdc.chunk.js.map": "/react-admin-dashboard/static/js/3.81927bdc.chunk.js.map",
+    "static/js/4.f28a0c75.chunk.js": "/react-admin-dashboard/static/js/4.f28a0c75.chunk.js",
+    "static/js/4.f28a0c75.chunk.js.map": "/react-admin-dashboard/static/js/4.f28a0c75.chunk.js.map",
+    "index.html": "/react-admin-dashboard/index.html",
+    "precache-manifest.a17d71ab136ba5cdc48693530090d8be.js": "/react-admin-dashboard/precache-manifest.a17d71ab136ba5cdc48693530090d8be.js",
+    "service-worker.js": "/react-admin-dashboard/service-worker.js",
+    "static/css/main.c722d9b5.chunk.css.map": "/react-admin-dashboard/static/css/main.c722d9b5.chunk.css.map",
+    "static/js/2.4669d5ca.chunk.js.LICENSE.txt": "/react-admin-dashboard/static/js/2.4669d5ca.chunk.js.LICENSE.txt",
+    "static/js/3.81927bdc.chunk.js.LICENSE.txt": "/react-admin-dashboard/static/js/3.81927bdc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24560bea.js",
+    "static/js/2.4669d5ca.chunk.js",
+    "static/css/main.c722d9b5.chunk.css",
+    "static/js/main.815e8375.chunk.js"
+  ]
+}
