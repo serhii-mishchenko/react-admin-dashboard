@@ -137,11 +137,11 @@ function TodayTrendsComponent() {
                 <div />
             </Column>
             <Column flexGrow={3} flexBasis='342px' breakpoints={{ 1024: classes.stats }}>
-                {renderStat('Resolved', '449')}
-                {renderStat('Received', '426')}
-                {renderStat('Average first response time', '33m')}
-                {renderStat('Average response time', '3h 8m')}
-                {renderStat('Resolution within SLA', '94%')}
+                {renderStat('Received', '60')}
+                {renderStat('Processed', '16')}
+                {renderStat('Sent', '43')}
+                {renderStat('Errors', '52')}
+                {renderStat('% of successful applications vs sent', '72%')}
             </Column>
         </Row>
     );
