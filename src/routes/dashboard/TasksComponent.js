@@ -46,13 +46,21 @@ function TasksComponent(props) {
     const theme = useTheme();
     const classes = useStyles({ theme });
     const [items, setItems] = useState([
-        { title: 'Finish ticket update', checked: false, tag: TAGS.URGENT },
         {
-            title: 'Create new ticket example',
+            title: 'Review CV',
+            checked: false,
+            tag: TAGS.URGENT
+        },
+        {
+            title: 'Participate in HR interview',
             checked: false,
             tag: TAGS.NEW
         },
-        { title: 'Update ticket report', checked: true, tag: TAGS.DEFAULT }
+        {
+            title: 'Prepare Contract',
+            checked: true,
+            tag: TAGS.DEFAULT
+        }
     ]);
 
     function onCheckboxClick(index) {
@@ -105,7 +113,6 @@ function TasksComponent(props) {
         <CardComponent
             containerStyles={props.containerStyles}
             title='Tasks'
-            link='View all'
             subtitle='Today'
             items={[
                 <Row horizontal='space-between' vertical='center'>
