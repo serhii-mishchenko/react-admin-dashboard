@@ -22,7 +22,6 @@ function LogoComponent() {
     return (
         <Row className={classes.container} horizontal='center' vertical='center'>
             <IconLogo />
-            <span className={classes.title}>Dashboard Kit</span>
         </Row>
     );
 }
