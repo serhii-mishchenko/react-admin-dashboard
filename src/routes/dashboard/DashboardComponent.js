@@ -54,7 +54,16 @@ function DashboardComponent() {
         'data',
         () => fetch('https://ec2-54-202-4-227.us-west-2.compute.amazonaws.com/stat/get_statistics').then(res => res.json()),
         {
-            cacheTime: 1 * (60 * 1000), // 1 min 
+            refetchInterval: 1 * (60 * 1000), // 1 min 
+            initialData: {
+                all: {
+                    received: 0,
+                    processed: 0,
+                    received: 0,
+                    sent: 0,
+                },
+                lastSevenDays: []
+            }
         }
     );
     console.log(data);
@@ -77,12 +86,12 @@ function DashboardComponent() {
                     <MiniCardComponent
                         className={classes.miniCardContainer}
                         title='Received'
-                        value='449'
+                        value={data.all.received}
                     />
                     <MiniCardComponent
                         className={classes.miniCardContainer}
                         title='Processed'
-                        value='426'
+                        value={data.all.processed}
                     />
                 </Row>
                 <Row
@@ -95,12 +104,12 @@ function DashboardComponent() {
                     <MiniCardComponent
                         className={classes.miniCardContainer}
                         title='Sent'
-                        value='332'
+                        value={data.all.received}
                     />
                     <MiniCardComponent
                         className={classes.miniCardContainer}
                         title='Errors'
-                        value='254'
+                        value={data.all.sent}
                     />
                 </Row>
             </Row>
