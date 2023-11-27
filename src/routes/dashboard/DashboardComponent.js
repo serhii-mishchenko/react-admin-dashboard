@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from 'react-query'
+
 import { Column, Row } from 'simple-flexbox';
 import { createUseStyles } from 'react-jss';
 import MiniCardComponent from 'components/cards/MiniCardComponent';
@@ -48,6 +50,14 @@ const useStyles = createUseStyles({
 
 function DashboardComponent() {
     const classes = useStyles();
+    const { data } = useQuery(
+        'data',
+        () => fetch('https://ec2-54-202-4-227.us-west-2.compute.amazonaws.com/stat/get_statistics').then(res => res.json()),
+        {
+            cacheTime: 1 * (60 * 1000), // 1 min 
+        }
+    );
+    console.log(data);
     return (
         <Column className={classes.top}>
             <Row

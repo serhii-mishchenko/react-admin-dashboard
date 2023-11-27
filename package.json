@@ -10,6 +10,7 @@
         "react-collapsible-content": "^1.0.0",
         "react-dom": "^16.8.6",
         "react-jss": "^10.4.0",
+        "react-query": "^3.39.3",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.3",
         "react-svg-line-chart": "^2.0.1",
