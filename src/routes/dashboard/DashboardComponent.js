@@ -114,7 +114,7 @@ function DashboardComponent() {
                 </Row>
             </Row>
             <div className={classes.todayTrends}>
-                <TodayTrendsComponent />
+                <TodayTrendsComponent data={data}/>
             </div>
         </Column>
     );

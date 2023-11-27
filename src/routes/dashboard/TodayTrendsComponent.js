@@ -3,11 +3,11 @@ import { Column, Row } from 'simple-flexbox';
 import { createUseStyles, useTheme } from 'react-jss';
 import LineChart from 'react-svg-line-chart';
 
-const data = [];
+// const data = [];
 
-for (let x = 1; x <= 24; x++) {
-    data.push({ x: x, y: Math.floor(Math.random() * 100) });
-}
+// for (let x = 1; x <= 24; x++) {
+//     data.push({ x: x, y: Math.floor(Math.random() * 100) });
+// }
 
 const useStyles = createUseStyles((theme) => ({
     container: {
@@ -75,9 +75,32 @@ const useStyles = createUseStyles((theme) => ({
     }
 }));
 
-function TodayTrendsComponent() {
+function TodayTrendsComponent({data}) {
     const theme = useTheme();
     const classes = useStyles({ theme });
+
+    const calculateLastSevenDays = () => {
+        var received = 0;
+        var processed = 0;
+        var sent = 0;
+        var error = 0;
+        for (let i = 0; i < data.lastSevenDays.length; i++) {
+            const row = data.lastSevenDays[i];
+            received += row.received;
+            processed += row.processed;
+            sent += row.sent;
+            error += row.sent;
+        }
+        return {
+            received,
+            processed,
+            sent,
+            error
+        }
+          
+    };
+
+    const lastSevenDays = calculateLastSevenDays();
 
     function renderLegend(color, title) {
         return (
@@ -124,24 +147,23 @@ function TodayTrendsComponent() {
                     {renderLegend(theme.color.green, 'Week')}
                 </Row>
                 <div className={classes.graphContainer}>
-                    <LineChart
+                    {/* <LineChart
                         data={data}
                         viewBoxWidth={500}
                         pointsStrokeColor={theme.color.green}
                         areaColor={theme.color.green}
                         areaVisible={true}
-                    />
+                    /> */}
                 </div>
             </Column>
             <Column className={classes.separator} breakpoints={{ 1024: { display: 'none' } }}>
                 <div />
             </Column>
             <Column flexGrow={3} flexBasis='342px' breakpoints={{ 1024: classes.stats }}>
-                {renderStat('Received', '60')}
-                {renderStat('Processed', '16')}
-                {renderStat('Sent', '43')}
-                {renderStat('Errors', '52')}
-                {renderStat('% of successful applications vs sent', '72%')}
+                {renderStat('Received', lastSevenDays.received)}
+                {renderStat('Processed', lastSevenDays.processed)}
+                {renderStat('Sent', lastSevenDays.sent)}
+                {renderStat('Errors', lastSevenDays.error)}
             </Column>
         </Row>
     );
