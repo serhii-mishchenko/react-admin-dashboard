@@ -59,8 +59,8 @@ function DashboardComponent() {
                 all: {
                     received: 0,
                     processed: 0,
-                    received: 0,
                     sent: 0,
+                    error: 0,
                 },
                 lastSevenDays: []
             }
@@ -104,12 +104,12 @@ function DashboardComponent() {
                     <MiniCardComponent
                         className={classes.miniCardContainer}
                         title='Sent'
-                        value={data.all.received}
+                        value={data.all.sent}
                     />
                     <MiniCardComponent
                         className={classes.miniCardContainer}
                         title='Errors'
-                        value={data.all.sent}
+                        value={data.all.error}
                     />
                 </Row>
             </Row>
