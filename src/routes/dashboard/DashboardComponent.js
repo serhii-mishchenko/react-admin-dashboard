@@ -5,6 +5,9 @@ import MiniCardComponent from 'components/cards/MiniCardComponent';
 import TodayTrendsComponent from './TodayTrendsComponent';
 
 const useStyles = createUseStyles({
+    top: {
+        maxWidth: 1440,
+    },
     cardsContainer: {
         marginRight: -30,
         marginTop: -30
@@ -46,7 +49,7 @@ const useStyles = createUseStyles({
 function DashboardComponent() {
     const classes = useStyles();
     return (
-        <Column>
+        <Column className={classes.top}>
             <Row
                 className={classes.cardsContainer}
                 wrap
