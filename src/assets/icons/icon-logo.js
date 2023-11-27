@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default () => (
-    <svg viewBox="0 0 106 31" fill="none" xmlns="http://www.w3.org/2000/svg" data-xds="LogoXINGLogoDuo" height="28" width="96"><g clip-path="url(#prefix__clip0_47_1328)" fill-rule="evenodd" clip-rule="evenodd"><path d="M1.805 5.984l3.635 6.479L0 22.018h6.491l5.4-9.555-3.634-6.48H1.805z" fill="#0698A0"></path><path d="M21.122 0l-10.49 18.642L17.396 31h6.582l-6.88-12.358L27.6 0h-6.478z" fill="#B7DF4B"></path><path d="M40.505 2.998l3.777 7.979 4.129-7.979h5.387l-6.608 11.98 6.868 13.024h-5.647l-4.245-8.735-4.207 8.735h-5.426l6.543-12.958-6.258-12.046h5.687zm16.578 25.004h5.245V2.998h-5.245v25.004zm48.904-14.353h-8.672v4.315h3.869V23.4a6.556 6.556 0 01-2.61.508c-3.972 0-5.621-2.985-5.621-8.304 0-4.966 1.428-8.564 6.127-8.564 1.571 0 3.298.43 4.986 1.186l1.506-3.99c-2.078-1.081-4.336-1.55-6.7-1.55-7.698 0-11.1 4.862-11.1 12.88 0 8.199 3.26 12.775 10.815 12.775 2.441 0 4.907-.509 7.413-1.695V13.649h-.013zM71.26 2.999h-4.414v25.003h5.102V13.857l8.412 14.145h4.271V2.998H79.53v14.145L71.26 2.998z" fill="#0698A0"></path></g><defs><clipPath id="prefix__clip0_47_1328"><path fill="#fff" d="M0 0h106v31H0z"></path></clipPath></defs></svg>
+    <img src="https://www.new-work.se/assets/static/nw_logo.svg" />
 );
