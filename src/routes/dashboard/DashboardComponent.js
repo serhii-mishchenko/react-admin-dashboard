@@ -52,7 +52,7 @@ function DashboardComponent() {
     const classes = useStyles();
     const { data } = useQuery(
         'data',
-        () => fetch('https://ec2-54-202-4-227.us-west-2.compute.amazonaws.com/stat/get_statistics').then(res => res.json()),
+        () => fetch('https://ec2-54-190-44-236.us-west-2.compute.amazonaws.com/stat/get_statistics').then(res => res.json()),
         {
             refetchInterval: 1 * (60 * 1000), // 1 min 
             initialData: {
@@ -66,7 +66,6 @@ function DashboardComponent() {
             }
         }
     );
-    console.log(data);
     return (
         <Column className={classes.top}>
             <Row

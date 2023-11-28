@@ -1,13 +1,14 @@
 import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { createUseStyles, useTheme } from 'react-jss';
-import LineChart from 'react-svg-line-chart';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
-// const data = [];
+const data2 = [
+    {name: 'Page A', uv: 400, },
+    {name: 'Page B', uv: 800, },
+    {name: 'Page D', uv: 900, }
+];
 
-// for (let x = 1; x <= 24; x++) {
-//     data.push({ x: x, y: Math.floor(Math.random() * 100) });
-// }
 
 const useStyles = createUseStyles((theme) => ({
     container: {
@@ -101,6 +102,7 @@ function TodayTrendsComponent({data}) {
     };
 
     const lastSevenDays = calculateLastSevenDays();
+    console.log(data);
 
     function renderLegend(color, title) {
         return (
@@ -141,19 +143,20 @@ function TodayTrendsComponent({data}) {
             >
                 <Row wrap horizontal='space-between'>
                     <Column>
-                        <span className={classes.graphTitle}>Week trends</span>
+                        <span className={classes.graphTitle}>Week trend</span>
                         {/* <span className={classes.graphSubtitle}>as of 25 May 2019, 09:41 PM</span> */}
                     </Column>
-                    {renderLegend(theme.color.green, 'Week')}
+                    {/* {renderLegend(theme.color.green, 'Week')} */}
                 </Row>
                 <div className={classes.graphContainer}>
-                    {/* <LineChart
-                        data={data}
-                        viewBoxWidth={500}
-                        pointsStrokeColor={theme.color.green}
-                        areaColor={theme.color.green}
-                        areaVisible={true}
-                    /> */}
+                <ResponsiveContainer minWidth={500} minHeight={500}>
+                    <LineChart width={1000} height={500} data={data2}>
+                        <Line type="monotone" dataKey="uv" stroke={theme.color.green} />
+                        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                    </LineChart>
+                </ResponsiveContainer>
                 </div>
             </Column>
             <Column className={classes.separator} breakpoints={{ 1024: { display: 'none' } }}>
