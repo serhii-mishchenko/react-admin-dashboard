@@ -3,12 +3,6 @@ import { Column, Row } from 'simple-flexbox';
 import { createUseStyles, useTheme } from 'react-jss';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
-const data2 = [
-    {name: 'Page A', uv: 400, },
-    {name: 'Page B', uv: 800, },
-    {name: 'Page D', uv: 900, }
-];
-
 
 const useStyles = createUseStyles((theme) => ({
     container: {
@@ -102,7 +96,30 @@ function TodayTrendsComponent({data}) {
     };
 
     const lastSevenDays = calculateLastSevenDays();
-    console.log(data);
+
+    const getChartData = () => {
+        const values = data.lastSevenDays.map((row) => {
+            return {
+                name: new Date(row.date),
+                uv: row.received
+            }
+        });
+        values.sort((date1, date2) => date1.name - date2.name);
+        let options = {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          };
+        return values.map((row) => {
+            return {
+                name: new Intl.DateTimeFormat("en-US", options).format(row.name),
+                // name: row.name.toDateString()
+                uv: row.uv
+            }
+        });
+    };
+
+    const chartData = getChartData();
 
     function renderLegend(color, title) {
         return (
@@ -150,11 +167,22 @@ function TodayTrendsComponent({data}) {
                 </Row>
                 <div className={classes.graphContainer}>
                 <ResponsiveContainer minWidth={500} minHeight={500}>
-                    <LineChart width={1000} height={500} data={data2}>
+                    <LineChart width={1000} height={500} data={chartData}>
                         <Line type="monotone" dataKey="uv" stroke={theme.color.green} />
                         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
+                        <XAxis
+                            dataKey="name"
+                            interval={0}
+                            style={{
+                                fontSize: '0.9rem',
+                            }}
+                        />
+                        <YAxis
+                            allowDecimals={false}
+                            style={{
+                                fontSize: '0.9rem',
+                            }}
+                        />
                     </LineChart>
                 </ResponsiveContainer>
                 </div>
