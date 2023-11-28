@@ -151,11 +151,11 @@ function HeaderComponent() {
                     options={[
                         {
                             label: 'Settings',
-                            onClick: onSettingsClick
+                            // onClick: onSettingsClick
                         },
                         {
                             label: 'Logout',
-                            onClick: () => console.log('logout')
+                            // onClick: () => console.log('logout')
                         }
                     ]}
                     position={{

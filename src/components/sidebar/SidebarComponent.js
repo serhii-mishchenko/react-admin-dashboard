@@ -44,17 +44,22 @@ function SidebarComponent() {
                 id={SLUGS.dashboard}
                 title='Dashboard'
                 icon={IconSubscription}
-                onClick={() => onClick(SLUGS.dashboard)}
+                // onClick={() => onClick(SLUGS.dashboard)}
             />
             <div className={classes.separator}></div>
             <MenuItem
                 id={SLUGS.settings}
                 title='Settings'
                 icon={IconSettings}
-                onClick={() => onClick(SLUGS.settings)}
+                // onClick={() => onClick(SLUGS.settings)}
             />
 
-            <MenuItem id='logout' title='Logout' icon={IconLogout} onClick={logout} />
+            <MenuItem
+                id='logout'
+                title='Logout'
+                icon={IconLogout}
+                // onClick={logout}
+            />
         </Menu>
     );
 }
