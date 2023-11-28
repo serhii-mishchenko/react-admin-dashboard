@@ -106,7 +106,7 @@ function TodayTrendsComponent({data}) {
         });
         values.sort((date1, date2) => date1.name - date2.name);
         let options = {
-            year: "numeric",
+            // year: "numeric",
             month: "short",
             day: "numeric",
           };
@@ -173,15 +173,15 @@ function TodayTrendsComponent({data}) {
                         <XAxis
                             dataKey="name"
                             interval={0}
-                            style={{
-                                fontSize: '0.9rem',
-                            }}
+                            // style={{
+                            //     fontSize: '1rem',
+                            // }}
                         />
                         <YAxis
                             allowDecimals={false}
-                            style={{
-                                fontSize: '0.9rem',
-                            }}
+                            // style={{
+                            //     fontSize: '1rem',
+                            // }}
                         />
                     </LineChart>
                 </ResponsiveContainer>
