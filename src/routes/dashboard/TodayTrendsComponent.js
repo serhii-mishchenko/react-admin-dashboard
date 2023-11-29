@@ -84,7 +84,7 @@ function TodayTrendsComponent({data}) {
             received += row.received;
             processed += row.processed;
             sent += row.sent;
-            error += row.sent;
+            error += row.error;
         }
         return {
             received,
