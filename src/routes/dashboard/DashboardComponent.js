@@ -4,6 +4,7 @@ import { useQuery } from 'react-query'
 import { Column, Row } from 'simple-flexbox';
 import { createUseStyles } from 'react-jss';
 import MiniCardComponent from 'components/cards/MiniCardComponent';
+import FullWidthCardComponent from 'components/cards/FullWidthCardComponent';
 import TodayTrendsComponent from './TodayTrendsComponent';
 
 const useStyles = createUseStyles({
@@ -45,6 +46,9 @@ const useStyles = createUseStyles({
         '@media (max-width: 1024px)': {
             marginTop: 30
         }
+    },
+    fullWidthCard: {
+        marginBottom: 30
     }
 });
 
@@ -66,8 +70,24 @@ function DashboardComponent() {
             }
         }
     );
+
     return (
         <Column className={classes.top}>
+            <Row className={classes.fullWidthCard}>
+                <h1>Application Traceability Dashboard</h1>
+            </Row>
+            <Row className={classes.fullWidthCard}>
+                <FullWidthCardComponent
+                    title="Number of companies onboarded:"
+                    value={1}
+                />                
+            </Row>
+            <Row className={classes.fullWidthCard}>
+                <FullWidthCardComponent
+                    title="Number of websites/domains onboarded:"
+                    value={1}
+                />
+            </Row>
             <Row
                 className={classes.cardsContainer}
                 wrap
